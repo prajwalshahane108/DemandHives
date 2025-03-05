@@ -13,7 +13,8 @@
 
 
 // app/page.js (update)
-// import Navbar from "./components/Navbar";
+"use client";
+import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
 import Works from "./components/Works";
@@ -26,7 +27,7 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar />
       <Hero />
       <Features />
       <Works />

@@ -13,7 +13,7 @@ const BannerContainer = styled(Box)(({ theme }) => ({
   justifyContent: 'space-between',
   overflow: 'hidden',
   position: 'relative',
-  marginBottom: "6.5rem"
+  marginBottom: "3.5rem"
 }));
 const MarqueeContainer = styled(Box)({
   display: 'flex',
@@ -67,7 +67,7 @@ const CallToAction = styled(Box)(({ theme }) => ({
 }));
 const TryFreeButton = styled(Button)(({ theme }) => ({
   color: 'white',
-  fontSize: '2rem',
+  fontSize: '2.5rem',
   fontWeight: 700,
   textTransform: 'none',
   padding: theme.spacing(0, 1),
@@ -112,8 +112,8 @@ const Banner = () => {
   // Array of promotional texts - keep this reasonable in length
   // The animation will duplicate these to create a continuous loop
   const promoTexts = [
-    { prefix: "Don't use", highlight: "Cogsy", suffix: "yet?" },
-    { prefix: "Grow with", highlight: "Cogsy", suffix: "today!" },
+    { prefix: "Don't use", highlight: "DemandHives", suffix: "yet?" },
+    { prefix: "Grow with", highlight: "DemandHives", suffix: "today!" },
     { prefix: "Ready for", highlight: "Better", suffix: "insights?" },
     { prefix: "Improve your", highlight: "Strategy", suffix: "now!" },
     { prefix: "Unlock", highlight: "Potential", suffix: "with us" }

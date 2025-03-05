@@ -108,7 +108,7 @@ export default function Home() {
     {
       icon: <StarIcon sx={{ color: "#00c2a8" }} />,
       text: `"We need it to operate effectively." -`,
-      image: <Image src="/placeholder.svg?height=30&width=120" alt="adapt naturals" width={120} height={30} />
+      image: <Image src="/star.png" alt="adapt naturals" width={60} height={30} />
     },
     {
       icon: <StarIcon sx={{ color: "#00c2a8" }} />,
@@ -128,7 +128,7 @@ export default function Home() {
     {
       icon: <StarIcon sx={{ color: "#00c2a8" }} />,
       text: `"Simplified our entire operation." -`,
-      image: <Image src="/placeholder.svg?height=30&width=120" alt="eco brand" width={120} height={30} />
+      image: <Image src="/star.png" alt="eco brand" width={60} height={30} />
     }
   ];
   const months = ["DEC", "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV"]
@@ -335,7 +335,7 @@ export default function Home() {
                             />
                           </Box>
                           <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-                            <Image src="/placeholder.svg?height=24&width=24" alt="Amazon" width={24} height={24} />
+                            <Image src="/star.png" alt="Amazon" width={24} height={24} />
                             <Typography variant="body1" sx={{ fontWeight: "bold", ml: 1 }}>
                               Amazon FBA
                             </Typography>

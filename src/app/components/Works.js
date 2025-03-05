@@ -250,7 +250,7 @@ export default function Home() {
               >
                 No need to babysit your stock levels.
                 <br />
-                Whenever you're running low, Cogsy will let
+                Whenever you're running low, DemandHives will let
                 <br />
                 you know it's time to restock.
               </Typography>

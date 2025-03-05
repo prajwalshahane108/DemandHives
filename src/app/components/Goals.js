@@ -133,7 +133,7 @@ export default function Home() {
                   </Typography>
                   <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                     <Typography variant="body2" color="textSecondary">
-                      Destination: Cogsy UK
+                      Destination: DemandHives UK
                     </Typography>
                   </Box>
                   <Box sx={{ flex: 1 }} />
