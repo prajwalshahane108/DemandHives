@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Georgian:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap'); */
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+    font-family: "montserrat";
+  }
+  h2 {
+    font-family: "montserrat";
+  }
+  h3 {
+    font-family: "montserrat";
+  }
+  h4 {
+    font-family: "montserrat";
+  }
+  h5 {
+    font-family: "montserrat";
+  }
