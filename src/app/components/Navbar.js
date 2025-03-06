@@ -1,5 +1,17 @@
-import { useState } from "react";
-import { AppBar, Toolbar, Button, Box, Typography, IconButton, Drawer, List, ListItem, ListItemButton, ListItemText } from "@mui/material";
+import { useState, useEffect } from "react";
+import {
+  AppBar,
+  Toolbar,
+  Button,
+  Box,
+  Typography,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -8,12 +20,22 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleScroll = (id) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
+    setMobileOpen(false); // Close mobile drawer after clicking a menu item
   };
 
   const toggleDrawer = (open) => () => {
@@ -31,9 +53,10 @@ const Navbar = () => {
     <AppBar
       position="sticky"
       sx={{
-        backgroundColor: "#523694",
+        backgroundColor: isScrolled ? "#7a4dff" : "#473077",
         boxShadow: "none",
-        padding: "10px 30px",
+        padding: isScrolled ? "10px 30px" : "30px 30px",
+        transition: "all 0.3s ease-in-out",
       }}
     >
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
@@ -72,6 +95,7 @@ const Navbar = () => {
                 <ListItem>
                   <Button
                     variant="outlined"
+                    onClick={() => handleScroll("start")}
                     sx={{
                       border: "2px solid white",
                       color: "white",
@@ -86,7 +110,7 @@ const Navbar = () => {
                       },
                     }}
                   >
-                    Start free
+                    Get Started
                   </Button>
                 </ListItem>
               </List>
@@ -112,6 +136,7 @@ const Navbar = () => {
             {/* Start Free Button */}
             <Button
               variant="outlined"
+              onClick={() => handleScroll("start")}
               sx={{
                 border: "2px solid white",
                 color: "white",
@@ -125,7 +150,7 @@ const Navbar = () => {
                 },
               }}
             >
-              Start free
+              Get Started
             </Button>
           </Box>
         )}

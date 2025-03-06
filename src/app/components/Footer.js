@@ -87,9 +87,12 @@ const CogsyClone = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Box sx={{ bgcolor: '#523694', color: 'white', minHeight: '100vh', 
-        marginTop: '6.5rem',
-       }}>
+      <Box
+        id="start"
+        sx={{
+          bgcolor: '#523694', color: 'white', minHeight: '100vh',
+          marginTop: '6.5rem',
+        }}>
         {/* Header */}
         <AppBar position="static" elevation={0} color="transparent">
           <Toolbar>
@@ -114,7 +117,7 @@ const CogsyClone = () => {
               fontSize: { xs: '2rem', md: '3.5rem' }
             }}
           >
-            It's your inventory.
+            Seamless Sourcing,
           </Typography>
           <Typography
             variant="h1"
@@ -127,11 +130,11 @@ const CogsyClone = () => {
               textFillColor: 'transparent',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
-              fontSize: { xs: '3.5rem', md: '8rem' },
+              fontSize: { xs: '3.5rem', md: '6rem' },
               lineHeight: 0.9
             }}
           >
-            Take control.
+            Reliable Delivery.
           </Typography>
           <Button
             variant="contained"
@@ -148,7 +151,7 @@ const CogsyClone = () => {
               px: { xs: 5, md: 15 }
             }}
           >
-            Start free trial
+            Get Started
           </Button>
         </Container>
         {/* Wave Pattern */}
@@ -156,15 +159,15 @@ const CogsyClone = () => {
         {/* Footer - Responsive version */}
         <Container maxWidth="xl" sx={{ pt: 4, pb: 8 }}>
           {/* Header with Logo and Social Media */}
-          <Box sx={{ 
-            mb: 4, 
-            display: "flex", 
-            alignItems: "center", 
+          <Box sx={{
+            mb: 4,
+            display: "flex",
+            alignItems: "center",
             justifyContent: "space-between",
             flexDirection: isMobile ? 'column' : 'row',
             gap: isMobile ? 2 : 0,
             ml: isMobile ? 0 : 10,
-            px: isMobile ? 2 : 0 
+            px: isMobile ? 2 : 0
           }}>
             {/* Left Side - Logo & Name */}
             <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -191,25 +194,25 @@ const CogsyClone = () => {
           {/* Main Footer Content */}
           <Grid container spacing={4} sx={{ px: isMobile ? 2 : 0 }}>
             {/* Tagline Section */}
-            <Grid item xs={12} md={5.5} sx={{ 
-              display: "flex", 
-              flexDirection: "column", 
-              alignItems: isMobile ? "center" : "flex-start", 
+            <Grid item xs={12} md={5.5} sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: isMobile ? "center" : "flex-start",
               textAlign: isMobile ? "center" : "left",
-              mb: isMobile ? 4 : 0 
+              mb: isMobile ? 4 : 0
             }}>
-              <Typography variant="h6" sx={{ 
-                fontWeight: 600, 
-                mb: 2, 
-                ml: isMobile ? 0 : 12, 
-                fontSize: { xs: '1.5rem', md: '2rem' } 
+              <Typography variant="h6" sx={{
+                fontWeight: 600,
+                mb: 2,
+                ml: isMobile ? 0 : 12,
+                fontSize: { xs: '1.5rem', md: '2rem' }
               }}>
                 Operate with 100% <br /> certainty
               </Typography>
-              <Typography variant="body2" sx={{ 
-                color: 'rgba(255,255,255,0.7)', 
-                ml: isMobile ? 0 : 12, 
-                fontSize: { xs: '1.2rem', md: '1.5rem' } 
+              <Typography variant="body2" sx={{
+                color: 'rgba(255,255,255,0.7)',
+                ml: isMobile ? 0 : 12,
+                fontSize: { xs: '1.2rem', md: '1.5rem' }
               }}>
                 Stay in touch
               </Typography>
@@ -222,64 +225,64 @@ const CogsyClone = () => {
                   <Typography variant="h6" sx={{ mb: 2, color: "rgba(255,255,255,0.7)", fontSize: '1.2rem' }}>
                     Company
                   </Typography>
-                  <Box sx={{ 
-                    display: "flex", 
-                    flexDirection: "column", 
-                    gap: 1.5, 
+                  <Box sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 1.5,
                     fontSize: { xs: '1rem', md: '1.2rem' },
                     mb: 4
                   }}>
-                    <Link href="#" color="#fff" underline="none">About</Link>
-                    <Link href="#" color="#fff" underline="none">Pricing</Link>
-                    <Link href="#" color="#fff" underline="none">Log in</Link>
+                    <Link href="#" color="#fff" underline="none">About Us</Link>
+                    <Link href="#" color="#fff" underline="none">Services</Link>
+                    <Link href="#" color="#fff" underline="none">Contact Us</Link>
                     <Link href="#" color="#fff" underline="none">Privacy policy</Link>
                   </Box>
-                  <Typography variant="h6" sx={{ mt: 2, mb: 2, color: "rgba(255,255,255,0.7)" }}>
+                  {/* <Typography variant="h6" sx={{ mt: 2, mb: 2, color: "rgba(255,255,255,0.7)" }}>
                     Integrations
                   </Typography>
-                  <Box sx={{ 
-                    display: "flex", 
-                    flexDirection: "column", 
-                    gap: 1.5, 
-                    fontSize: { xs: '1rem', md: '1.2rem' } 
+                  <Box sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 1.5,
+                    fontSize: { xs: '1rem', md: '1.2rem' }
                   }}>
                     <Link href="#" color="#ffffff" underline="none">Shopify</Link>
                     <Link href="#" color="#ffffff" underline="none">Amazon</Link>
                     <Link href="#" color="#ffffff" underline="none">ShipBob</Link>
                     <Link href="#" color="#ffffff" underline="none">All integrations</Link>
-                  </Box>
+                  </Box> */}
                 </Grid>
                 {/* Resources and Ultimate Guides */}
                 <Grid item xs={12} sm={6} md={6}>
                   <Typography variant="h6" sx={{ mb: 2, color: "rgba(255,255,255,0.7)" }}>
-                    Resources
+                  Resources & Support
                   </Typography>
-                  <Box sx={{ 
-                    display: "flex", 
-                    flexDirection: "column", 
-                    gap: 1.5, 
+                  <Box sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 1.5,
                     fontSize: { xs: '1rem', md: '1.2rem' },
                     mb: 4
                   }}>
-                    <Link href="#" color="#ffffff" underline="none">Blog</Link>
-                    <Link href="#" color="#ffffff" underline="none">Newsletter</Link>
-                    <Link href="#" color="#ffffff" underline="none">Podcast</Link>
-                    <Link href="#" color="#ffffff" underline="none">Support</Link>
+                    <Link href="#" color="#ffffff" underline="none">Industry Insights</Link>
+                    <Link href="#" color="#ffffff" underline="none">Procurement Guides</Link>
+                    <Link href="#" color="#ffffff" underline="none">Logistics & Supply Chain</Link>
+                    <Link href="#" color="#ffffff" underline="none">Bulk Order Assistance</Link>
                   </Box>
-                  <Typography variant="h6" sx={{ mt: 2, mb: 2, color: "rgba(255,255,255,0.7)" }}>
+
+                  {/* <Typography variant="h6" sx={{ mt: 2, mb: 2, color: "rgba(255,255,255,0.7)" }}>
                     Ultimate guides
                   </Typography>
-                  <Box sx={{ 
-                    display: "flex", 
-                    flexDirection: "column", 
-                    gap: 1.5, 
-                    fontSize: { xs: '1rem', md: '1.2rem' } 
+                  <Box sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 1.5,
+                    fontSize: { xs: '1rem', md: '1.2rem' }
                   }}>
-                    <Link href="#" color="#ffffff" underline="none">Purchase orders</Link>
-                    <Link href="#" color="#ffffff" underline="none">Demand planning</Link>
-                    <Link href="#" color="#ffffff" underline="none">Inventory management</Link>
-                    <Link href="#" color="#ffffff" underline="none">Backordering</Link>
-                  </Box>
+                    <Link href="#" color="#ffffff" underline="none">Procurement Guides</Link>
+                    <Link href="#" color="#ffffff" underline="none">Logistics & Supply Chain Tips</Link>
+                    <Link href="#" color="#ffffff" underline="none">Bulk Order Assistance</Link>
+                  </Box> */}
                 </Grid>
               </Grid>
             </Grid>

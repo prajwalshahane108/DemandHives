@@ -6,36 +6,37 @@ export default function TestimonialCarousel() {
   // Array of testimonial data
   const testimonials = [
     {
-      quote: "Spreadsheets were too static and didn't work for my business in real-time, so <strong>it was a no-brainer to use</strong>. Recommend it enough!",
+      quote: "Finding reliable suppliers was a challenge until we partnered with Global Supply Connect. <strong>They streamlined our entire procurement process</strong> and saved us valuable time.",
       author: "Chris Kresser",
       role: "Founder of Adapt Naturals",
-      avatar: "/chris-kresser.jpg"
+      avatar: "/boy.jpg"
     },
     {
-      quote: "This platform has completely transformed how we manage inventory. <strong>We've increased efficiency by 40%</strong> since implementation.",
+      quote: "Their sourcing network is unmatched. <strong>We've reduced procurement costs by 35%</strong> while improving product quality.",
       author: "Sarah Johnson",
       role: "Operations Director at EcoStyle",
-      avatar: "/placeholder.jpg"
+      avatar: "/girl.jpg"
     },
     {
-      quote: "The forecasting tools are incredibly accurate. <strong>We've reduced stockouts by 75%</strong> while keeping less inventory on hand.",
+      quote: "Global shipping and logistics used to be a nightmare. <strong>Now, every order arrives on time and hassle-free</strong> thanks to their expertise.",
       author: "Michael Chen",
       role: "CEO of Urban Essentials",
-      avatar: "/placeholder.jpg"
+      avatar: "/boy2.jpg"
     },
     {
-      quote: "The best investment we've made this year. <strong>Customer satisfaction is up</strong> because we're rarely out of stock now.",
+      quote: "The best procurement decision we’ve made. <strong>They handle everything from sourcing to last-mile delivery</strong>, making our operations seamless.",
       author: "Jessica Williams",
       role: "Retail Operations at Caraway",
-      avatar: "/placeholder.jpg"
+      avatar: "/boy3.jpg"
     },
     {
-      quote: "Setup was quick and intuitive. Within days we saw the benefits and <strong>ROI has been incredible</strong> - paying for itself in the first month.",
+      quote: "Their end-to-end support is top-notch. <strong>We’ve optimized our supply chain and boosted efficiency</strong> since working with them.",
       author: "David Rodriguez",
       role: "Founder of NatureBlend",
-      avatar: "/placeholder.jpg"
+      avatar: "/boy4.jpg"
     }
-  ];
+];
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visible, setVisible] = useState(true);
   useEffect(() => {

@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from 'react';
-import { 
-  Box, 
-  Typography, 
-  Button, 
-  Card, 
-  CardContent, 
+import {
+  Box,
+  Typography,
+  Button,
+  Card,
+  CardContent,
   Container,
   TextField,
   MenuItem,
@@ -73,7 +73,7 @@ const LabelBox = styled(Box)(({ theme }) => ({
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 const generateChartData = () => {
   const data = [];
-  
+
   // Current year data
   for (let i = 0; i < 12; i++) {
     data.push({
@@ -83,7 +83,7 @@ const generateChartData = () => {
       predictedRevenue: i >= 6 ? Math.floor(Math.random() * 50000) + 20000 : 0
     });
   }
-  
+
   // Next year data
   for (let i = 0; i < 12; i++) {
     data.push({
@@ -93,7 +93,7 @@ const generateChartData = () => {
       predictedRevenue: Math.floor(Math.random() * 60000) + 30000
     });
   }
-  
+
   return data;
 };
 export default function Dashboard() {
@@ -101,155 +101,24 @@ export default function Dashboard() {
   const [metric, setMetric] = useState('No Metric');
   const [data, setData] = useState(generateChartData());
   return (
-    <Container maxWidth="lg" sx={{ py: 4 }}>
+    <Container maxWidth="lg" sx={{ py: 4 }} id="growth">
       <Grid container spacing={4}>
-        <Grid item xs={12} md={8}>
-          <GradientBox>
-            <WhiteCard>
-              <Box sx={{ p: 2 }}>
-                <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
-                  <Typography variant="h6" component="div" fontWeight="bold">
-                    Growth Plan
-                  </Typography>
-                  <Box display="flex" alignItems="center">
-                    <TextField
-                      select
-                      size="small"
-                      value={dateRange}
-                      onChange={(e) => setDateRange(e.target.value)}
-                      sx={{ mr: 2, minWidth: 200 }}
-                    >
-                      <MenuItem value="JAN 2023 - DEC 2023">JAN 2023 - DEC 2023</MenuItem>
-                      <MenuItem value="JAN 2023 - DEC 2024">JAN 2023 - DEC 2024</MenuItem>
-                    </TextField>
-                    
-                    <TextField
-                      select
-                      size="small"
-                      value={metric}
-                      onChange={(e) => setMetric(e.target.value)}
-                      label="Overlay a metric"
-                      sx={{ minWidth: 180 }}
-                    >
-                      <MenuItem value="No Metric">No Metric</MenuItem>
-                      <MenuItem value="Revenue">Revenue</MenuItem>
-                      <MenuItem value="Inventory">Inventory</MenuItem>
-                    </TextField>
-                    
-                    <IconButton size="small" sx={{ ml: 1, backgroundColor: '#f0f0f0', borderRadius: '50%' }}>
-                      <Typography variant="body2" component="span" color="primary" fontWeight="bold">?</Typography>
-                    </IconButton>
-                  </Box>
-                </Box>
-                
-                <Box display="flex" alignItems="center" mb={3}>
-                  <TealButton
-                    variant="contained"
-                    startIcon={<EditIcon />}
-                    size="small"
-                    sx={{ mr: 2 }}
-                  >
-                    Edit Plan
-                  </TealButton>
-                  
-                  <TealButton
-                    variant="outlined"
-                    startIcon={<DownloadIcon />}
-                    size="small"
-                    sx={{ color: '#4cd6c0', borderColor: '#4cd6c0' }}
-                  >
-                    Export to CSV
-                  </TealButton>
-                </Box>
-                
-                <Box sx={{ display: 'flex', mb: 2 }}>
-                  <Box sx={{ display: 'flex', alignItems: 'center', mr: 4 }}>
-                    <Box sx={{ width: 10, height: 10, borderRadius: '50%', bgcolor: '#4cd6c0', mr: 1 }}></Box>
-                    <Typography variant="body2">Actual Revenue</Typography>
-                  </Box>
-                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <Box sx={{ width: 10, height: 10, borderRadius: '50%', bgcolor: '#8a4fff', mr: 1 }}></Box>
-                    <Typography variant="body2">Predicted Revenue</Typography>
-                  </Box>
-                </Box>
-                
-                <Box sx={{ height: 300 }}>
-                  <ResponsiveContainer width="100%" height="100%">
-                    <BarChart
-                      data={data}
-                      margin={{
-                        top: 10,
-                        right: 10,
-                        left: 10,
-                        bottom: 30,
-                      }}
-                    >
-                      <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                      <XAxis 
-                        dataKey="name" 
-                        tickLine={false}
-                        tick={props => {
-                          const { x, y, payload } = props;
-                          return (
-                            <g transform={`translate(${x},${y})`}>
-                              <text 
-                                x={0} 
-                                y={0} 
-                                dy={16} 
-                                textAnchor="middle" 
-                                fill="#666"
-                                fontSize={12}
-                              >
-                                {payload.value}
-                              </text>
-                              <text 
-                                x={0} 
-                                y={15} 
-                                dy={16} 
-                                textAnchor="middle" 
-                                fill="#666"
-                                fontSize={12}
-                              >
-                                {data.find(item => item.name === payload.value)?.year}
-                              </text>
-                            </g>
-                          );
-                        }}
-                      />
-                      <YAxis 
-                        tickFormatter={(value) => `US${Math.floor(value / 1000)}K`}
-                        axisLine={false}
-                        tickLine={false}
-                      />
-                      <Tooltip 
-                        formatter={(value) => [`${value.toLocaleString()}`, 'Revenue']}
-                        labelFormatter={(label) => `${label}`}
-                      />
-                      <Bar 
-                        dataKey="actualRevenue" 
-                        fill="#4cd6c0" 
-                        radius={[2, 2, 0, 0]} 
-                        barSize={25}
-                        name="Actual Revenue"
-                      />
-                      <Bar 
-                        dataKey="predictedRevenue" 
-                        fill="#8a4fff" 
-                        radius={[2, 2, 0, 0]} 
-                        barSize={25}
-                        name="Predicted Revenue"
-                      />
-                    </BarChart>
-                  </ResponsiveContainer>
-                </Box>
-              </Box>
-              <LabelBox>
-                Data-backed decisions
-              </LabelBox>
-            </WhiteCard>
-          </GradientBox>
+        <Grid item xs={12} md={7}>
+          <Box sx={{ display: "flex", justifyContent: "left", mb: 4 }}>
+            <Box
+              component="img"
+              src="/growth.gif"
+              alt="Bee conservation hexagon images"
+              sx={{
+                width: "100%",
+                maxWidth: 700,
+                height: "auto",
+                objectFit: "contain",
+              }}
+            />
+          </Box>
         </Grid>
-        
+
         <Grid item xs={12} md={4}>
           <Box
             sx={{
@@ -266,13 +135,13 @@ export default function Dashboard() {
               sx={{
                 color: '#5a0cb2',
                 fontWeight: 'bold',
-                mb: 3,
+                mb: 2,
                 fontSize: { xs: '2.5rem', md: '3rem' },
               }}
             >
-              Unlock new revenue growth
+              Maximize Efficiency, Boost Profits
             </Typography>
-            
+
             <Typography
               variant="h6"
               component="p"
@@ -283,11 +152,11 @@ export default function Dashboard() {
                 lineHeight: 1.5,
               }}
             >
-              Always maintain optimal inventory levels at every warehousing location. And rake in up to 40% more revenue as a result!
+              Ensure optimal stock levels across all locations and eliminate supply chain disruptions—leading to increased sales and up to 40% higher revenue!
             </Typography>
-            
+
             <PurpleButton variant="contained" size="large">
-              Start for free
+            Optimize Supply Chain
             </PurpleButton>
           </Box>
         </Grid>

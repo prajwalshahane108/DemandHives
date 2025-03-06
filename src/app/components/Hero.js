@@ -44,24 +44,24 @@ const BeeConservation = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <MainContainer maxWidth="lg">
-      <Grid container spacing={4} alignItems="center" justifyContent="center">
-        <Grid item xs={12} md={7}>
+    <MainContainer maxWidth="lg" id="Home">
+      <Grid container spacing={4} sx={{ mt: 0.5 }} alignItems="center" justifyContent="center" >
+        <Grid item xs={12} md={7} >
           <Box sx={{ bgcolor: "#fff", textAlign: isMobile ? "center" : "left" }}>
-            <Box sx={{ bgcolor: "#fff", textAlign: isMobile ? "center" : "left", ml: { xs: 0, sm: 7 }}}>
+            <Box sx={{ bgcolor: "#fff", textAlign: isMobile ? "center" : "left", ml: { xs: 0, sm: 7 } }}>
               <Typography
                 variant={isMobile ? "h4" : "h2"}
                 component="h1"
                 sx={{ fontWeight: "bold", color: "#222222", mb: 1 }}
               >
-                Sponsor a hive
+                Seamless Global Sourcing & Logistics
               </Typography>
               <Typography
                 variant={isMobile ? "h4" : "h2"}
                 component="h1"
                 sx={{ fontWeight: "bold", color: "#222222", mb: 2 }}
               >
-                to save the bees
+
               </Typography>
             </Box>
             <Typography
@@ -70,9 +70,8 @@ const BeeConservation = () => {
               paragraph
               sx={{ mb: 4, maxWidth: isMobile ? "100%" : "80%", mx: "auto" }}
             >
-              For several years, the bee population has been in sharp decline. We
-              propose you to sponsor hives and receive honey every month in
-              exchange.
+              {/* From eco-friendly cleaning products in Paris to office furniture in Singapore—DemandHives ensures your bulk procurement needs are met efficiently and reliably. */}
+              DemandHives is a global sourcing and logistics platform that seamlessly connects buyers with trusted suppliers worldwide. Whether you need 500 eco-friendly cleaning products for a boutique hotel in Paris, bulk office furniture for a new coworking space in Singapore, or specialized construction materials for a project in Brazil, we ensure that your demand finds the right supplier—efficiently and reliably.
             </Typography>
 
             <Box
@@ -87,9 +86,9 @@ const BeeConservation = () => {
               }}
             >
               <MainButton variant="outlined" sx={{ border: "2px solid #FFC107" }}>
-                Sponsor a hive
+                Learn More
               </MainButton>
-              <MainButton>Buy honey directly</MainButton>
+              <MainButton>Explore Sourcing</MainButton>
             </Box>
 
             <Grid container spacing={2} justifyContent={isMobile ? "center" : "flex-start"}>
@@ -99,27 +98,27 @@ const BeeConservation = () => {
                     400+
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    sponsored hives
+                    Successful Bulk Orders Fulfilled
                   </Typography>
                 </StatBox>
               </Grid>
               <Grid item xs={12} sm={4}>
                 <StatBox>
                   <Typography variant="h4" component="div" fontWeight="bold">
-                    20K$
+                    20K $
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    of donations
+                    Countries Served
                   </Typography>
                 </StatBox>
               </Grid>
               <Grid item xs={12} sm={4}>
                 <StatBox>
                   <Typography variant="h4" component="div" fontWeight="bold">
-                    12k
+                    10M $
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    honey pots delivered
+                    Worth of Goods Procured
                   </Typography>
                 </StatBox>
               </Grid>
@@ -131,13 +130,14 @@ const BeeConservation = () => {
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Box
               component="img"
-              src="/honey.png"
+              src="/bee.png"
               alt="Bee conservation hexagon images"
               sx={{
                 width: "100%",
-                maxWidth: 400,
+                maxWidth: 380,
                 height: "auto",
                 objectFit: "contain",
+                borderRadius: "20px",
               }}
             />
           </Box>

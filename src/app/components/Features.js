@@ -102,41 +102,42 @@ const CardTitle = styled(Typography)(({ theme }) => ({
 export default function Home() {
   const [animate, setAnimate] = useState(false);
   const testimonialRef = useRef(null);
-  
+
   // Testimonial data
   const testimonials = [
     {
       icon: <StarIcon sx={{ color: "#00c2a8" }} />,
-      text: `"We need it to operate effectively." -`,
-      image: <Image src="/star.png" alt="adapt naturals" width={60} height={30} />
+      text: `"Seamless procurement process!" -`,
+      brand: <Typography variant="body1" sx={{ color: "#6c41e0", fontWeight: 600, fontStyle: "italic" }}>Global Resorts</Typography>
     },
     {
       icon: <StarIcon sx={{ color: "#00c2a8" }} />,
-      text: `"A total game changer." -`,
-      brand: <Typography variant="body1" sx={{ color: "#6c41e0", fontWeight: 600, fontStyle: "italic" }}>Caraway</Typography>
+      text: `"Reliable and cost-effective sourcing." -`,
+      image: <Image src="/star.png" alt="worldwide logistics" width={30} height={30} />
     },
     {
       icon: <StarIcon sx={{ color: "#00c2a8" }} />,
-      text: `"Highly recommend!" -"`,
-      brand: null
+      text: `"Fast delivery and exceptional service!" -`,
+      brand: <Typography variant="body1" sx={{ color: "#6c41e0", fontWeight: 600, fontStyle: "italic" }}>Elite Retailers</Typography>
     },
     {
       icon: <StarIcon sx={{ color: "#00c2a8" }} />,
-      text: `"Best investment for our inventory." -`,
-      brand: <Typography variant="body1" sx={{ color: "#6c41e0", fontWeight: 600, fontStyle: "italic" }}>LuxHome</Typography>
+      text: `"The best partner for bulk orders!" -`,
+      image: <Image src="/star.png" alt="supply chain expert" width={30} height={30} />
     },
     {
       icon: <StarIcon sx={{ color: "#00c2a8" }} />,
-      text: `"Simplified our entire operation." -`,
-      image: <Image src="/star.png" alt="eco brand" width={60} height={30} />
+      text: `"Transformed our logistics efficiency!" -`,
+      brand: <Typography variant="body1" sx={{ color: "#6c41e0", fontWeight: 600, fontStyle: "italic" }}>Prestige Hotels</Typography>
     }
   ];
-  const months = ["DEC", "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV"]
   
+  const months = ["DEC", "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV"]
+
   useEffect(() => {
     // Start animation after component is mounted
     setAnimate(true);
-    
+
     return () => {
       setAnimate(false);
     };
@@ -153,17 +154,18 @@ export default function Home() {
     </>
   );
   return (
-    <Container maxWidth="xl" sx={{ bgcolor: "#fff" }}>
+    <Container
+      maxWidth="xl" sx={{ bgcolor: "#fff" }}>
       <Box>
         <MainHeading variant="h1">
-          Save 20+ hours a week on
+        Save 20+ hours a week on 
           <br />
-          inventory management
+          procurement & logistics
         </MainHeading>
-        
+
         {/* Marquee Testimonial Container */}
-        <TestimonialContainer>
-          <TestimonialMarquee animate={animate} speed={80} ref={testimonialRef}>
+        <TestimonialContainer >
+          <TestimonialMarquee  animate={animate} speed={80} ref={testimonialRef}>
             {/* Create multiple copies for continuous loop */}
             {[...testimonials, ...testimonials, ...testimonials, ...testimonials].map((item, index) => (
               <TestimonialItem key={index}>
@@ -172,252 +174,41 @@ export default function Home() {
             ))}
           </TestimonialMarquee>
         </TestimonialContainer>
-        
-        <MainSection>
+
+        <MainSection id='inventory'>
           <Container>
-            <Grid container spacing={6}>
-              <Grid item xs={12} md={5}>
+            <Grid container spacing={5} >
+              <Grid
+                item
+                xs={12}
+                md={5}
+                sx={{ mt: 8, }}
+              >
                 <SubHeading variant="h2">
-                  Manage inventory in
+                Streamline Your 
                   <br />
-                  <HighlightText>real-time</HighlightText>
+                  <HighlightText>Supply Chain</HighlightText>
                 </SubHeading>
                 <Typography variant="body1" sx={{ mb: 4, color: "#6c41e0", fontSize: "1.1rem" }}>
-                  Check your stock levels, track in-transit inventory, and house vendor need-to-knows – all in one tidy
-                  place.
+                Monitor stock availability, track shipments in real-time, and manage vendor details—all from a single dashboard.
                 </Typography>
                 <StyledButton variant="contained" size="large">
-                  Start for free
+                Start Sourcing Now
                 </StyledButton>
               </Grid>
               <Grid item xs={12} md={7}>
-                <Box sx={{ position: "relative" }}>
-                  {/* Incoming PO Tag */}
+                <Box sx={{ display: "flex", justifyContent: "center", }}>
                   <Box
+                    component="img"
+                    src="/tik.png"
+                    alt="Bee conservation hexagon images"
                     sx={{
-                      position: "absolute",
-                      top: -20,
-                      left: 0,
-                      backgroundColor: "#7c5ce6",
-                      color: "white",
-                      padding: "4px 12px",
-                      borderRadius: "8px",
-                      transform: "rotate(-5deg)",
-                      zIndex: 1,
+                      width: "100%",
+                      maxWidth: 600,
+                      height: "auto",
+                      objectFit: "contain",
                     }}
-                  >
-                    <Typography variant="body2" sx={{ fontWeight: "bold" }}>
-                      <LocalShippingIcon sx={{ fontSize: 16, mr: 0.5 }} />
-                      Incoming PO
-                    </Typography>
-                  </Box>
-                  {/* TikTok Ads Tag */}
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      top: -10,
-                      right: 40,
-                      backgroundColor: "#7c5ce6",
-                      color: "white",
-                      padding: "4px 12px",
-                      borderRadius: "8px",
-                      zIndex: 1,
-                    }}
-                  >
-                    <Typography variant="body2" sx={{ fontWeight: "bold" }}>
-                      TikTok Ads
-                    </Typography>
-                  </Box>
-                  {/* Calendar Card */}
-                  <Card
-                    sx={{
-                      mb: 2,
-                      borderRadius: "16px",
-                      border: "2px solid #7c5ce6",
-                      boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-                    }}
-                  >
-                    <CardContent sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
-                      {months.map((month) => (
-                        <MonthChip key={month} label={month} month={month} />
-                      ))}
-                    </CardContent>
-                  </Card>
-                  <Grid container spacing={2}>
-                    <Grid item xs={12} md={6}>
-                      {/* Replenish Now Card */}
-                      <Card
-                        sx={{
-                          borderRadius: "16px",
-                          mb: 2,
-                          border: "2px solid #7c5ce6",
-                          boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-                        }}
-                      >
-                        <CardContent>
-                          <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-                            <Box
-                              sx={{
-                                width: 12,
-                                height: 12,
-                                borderRadius: "50%",
-                                backgroundColor: "#ff5c5c",
-                                mr: 1,
-                              }}
-                            />
-                            <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-                              REPLENISH NOW
-                            </Typography>
-                          </Box>
-                          <Typography
-                            variant="h3"
-                            sx={{ color: "#7c5ce6", fontWeight: "bold", fontSize: "2.5rem", mb: 1 }}
-                          >
-                            4
-                          </Typography>
-                          <Typography variant="body2" sx={{ color: "#7c5ce6", mb: 2 }}>
-                            Products
-                          </Typography>
-                          <Box sx={{ mb: 1 }}>
-                            <Typography variant="body2" sx={{ color: "#7c5ce6" }}>
-                              Revenue Losses:{" "}
-                              <Typography component="span" sx={{ color: "#7c5ce6", fontWeight: "bold" }}>
-                                $200k
-                              </Typography>
-                            </Typography>
-                          </Box>
-                          <Box sx={{ mb: 2 }}>
-                            <Typography variant="body2" sx={{ color: "#7c5ce6" }}>
-                              Working Capital Needed:{" "}
-                              <Typography component="span" sx={{ color: "#7c5ce6", fontWeight: "bold" }}>
-                                $110k
-                              </Typography>
-                            </Typography>
-                          </Box>
-                          <Box sx={{ display: "flex", alignItems: "center" }}>
-                            <Typography variant="body2" sx={{ color: "#7c5ce6", fontWeight: "bold" }}>
-                              Review
-                            </Typography>
-                            <ArrowForwardIcon sx={{ color: "#7c5ce6", ml: 1, fontSize: "1rem" }} />
-                          </Box>
-                        </CardContent>
-                      </Card>
-                      {/* Shopify & Amazon Card */}
-                      <Card
-                        sx={{
-                          borderRadius: "16px",
-                          border: "2px solid #7c5ce6",
-                          boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-                        }}
-                      >
-                        <CardContent>
-                          <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-                            <ShopIcon sx={{ color: "#7c5ce6", mr: 1 }} />
-                            <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-                              Shopify (US)
-                            </Typography>
-                          </Box>
-                          <Box sx={{ mb: 2 }}>
-                            <Box sx={{ display: "flex", justifyContent: "space-between", mb: 0.5 }}>
-                              <Typography variant="body2">280k/300k</Typography>
-                            </Box>
-                            <LinearProgress
-                              variant="determinate"
-                              value={90}
-                              sx={{
-                                height: 8,
-                                borderRadius: 4,
-                                backgroundColor: "#e0e0e0",
-                                "& .MuiLinearProgress-bar": {
-                                  backgroundColor: "#ff9a9a",
-                                },
-                              }}
-                            />
-                          </Box>
-                          <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-                            <Image src="/star.png" alt="Amazon" width={24} height={24} />
-                            <Typography variant="body1" sx={{ fontWeight: "bold", ml: 1 }}>
-                              Amazon FBA
-                            </Typography>
-                          </Box>
-                          <Box>
-                            <Box sx={{ display: "flex", justifyContent: "space-between", mb: 0.5 }}>
-                              <Typography variant="body2">60k/200k</Typography>
-                            </Box>
-                            <LinearProgress
-                              variant="determinate"
-                              value={30}
-                              sx={{
-                                height: 8,
-                                borderRadius: 4,
-                                backgroundColor: "#e0e0e0",
-                                "& .MuiLinearProgress-bar": {
-                                  backgroundColor: "#ff9a9a",
-                                },
-                              }}
-                            />
-                          </Box>
-                        </CardContent>
-                      </Card>
-                    </Grid>
-                    <Grid item xs={12} md={6}>
-                      {/* Marketing Events Card */}
-                      <Card
-                        sx={{
-                          borderRadius: "16px",
-                          height: "100%",
-                          border: "2px solid #00c2a8",
-                          boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-                        }}
-                      >
-                        <CardContent>
-                          <Chip
-                            label="MARKETING EVENTS"
-                            sx={{
-                              backgroundColor: "#e8f7f7",
-                              color: "#00c2a8",
-                              fontWeight: "bold",
-                              mb: 3,
-                            }}
-                          />
-                          <Box sx={{ mb: 4 }}>
-                            <Typography variant="h6" sx={{ color: "#6c41e0", fontWeight: "bold", mb: 1 }}>
-                              TikTok Ads
-                            </Typography>
-                            <Typography variant="body2" sx={{ color: "#6c41e0" }}>
-                              5x Lift
-                            </Typography>
-                            <Box
-                              sx={{
-                                borderBottom: "1px dashed #ccc",
-                                my: 2,
-                              }}
-                            />
-                          </Box>
-                          <Box>
-                            <Typography variant="h6" sx={{ color: "#6c41e0", fontWeight: "bold", mb: 1 }}>
-                              Spring Promo
-                            </Typography>
-                            <Typography variant="body2" sx={{ color: "#6c41e0" }}>
-                              3x Lift
-                            </Typography>
-                          </Box>
-                          {/* Location Pin */}
-                          <Box
-                            sx={{
-                              position: "absolute",
-                              bottom: 20,
-                              right: 20,
-                              width: 40,
-                              height: 40,
-                              backgroundColor: "#00c2a8",
-                              borderRadius: "50%",
-                            }}
-                          ></Box>
-                        </CardContent>
-                      </Card>
-                    </Grid>
-                  </Grid>
+                  />
                 </Box>
               </Grid>
             </Grid>

@@ -163,80 +163,27 @@ export default function Home() {
     <MainContainer sx={{ margin: 3, borderRadius: 4 }}>
       <Container maxWidth="lg">
         <Grid container spacing={6} alignItems="center">
-          <Grid item xs={12} md={6}>
-            <Box sx={{ position: "relative" }}>
-              <GraphContainer>
-                <StatsCard>
-                  <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
-                    <MonetizationOnIcon sx={{ color: "#8a56ff", mr: 1 }} />
-                    <Typography variant="body1" sx={{ fontWeight: "bold", color: "#5a3b9c" }}>
-                      Predicted Revenue: $$$
-                    </Typography>
-                  </Box>
-                  <Box sx={{ display: "flex", alignItems: "center" }}>
-                    <TrendingUpIcon sx={{ color: "#8a56ff", mr: 1 }} />
-                    <Typography variant="body1" sx={{ fontWeight: "bold", color: "#5a3b9c" }}>
-                      Planned Growth: 150%
-                    </Typography>
-                  </Box>
-                </StatsCard>
-
-                <BarChart />
-              </GraphContainer>
-
-              <Paper
+          <Grid item xs={12} md={7}>
+            <Box sx={{ display: "flex", justifyContent: "center" }}>
+              <Box
+                component="img"
+                src="/revenue.png"
+                alt="Bee conservation hexagon images"
                 sx={{
-                  p: 1,
-                  display: "flex",
-                  flexWrap: "wrap",
-                  justifyContent: "center",
-                  borderRadius: "16px",
-                  border: "2px solid #8a56ff",
-                  boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
-                  position: "relative",
-                  transform: "rotate(-5deg)",
-                  maxWidth: "90%",
-                  mx: "auto",
+                  width: "100%",
+                  maxWidth: 900,
+                  height: "auto",
+                  objectFit: "contain",
                 }}
-              >
-                {months.map((month) => (
-                  <MonthChip key={month} label={month} month={month} />
-                ))}
-
-                {/* Decorative elements */}
-                <Box
-                  sx={{
-                    position: "absolute",
-                    bottom: -20,
-                    right: -20,
-                    width: 40,
-                    height: 40,
-                    backgroundColor: "#00c2a8",
-                    borderRadius: "50%",
-                    opacity: 0.5,
-                  }}
-                />
-                <Box
-                  sx={{
-                    position: "absolute",
-                    bottom: -10,
-                    right: -10,
-                    width: 20,
-                    height: 20,
-                    backgroundColor: "#00c2a8",
-                    borderRadius: "50%",
-                    opacity: 0.7,
-                  }}
-                />
-              </Paper>
+              />
             </Box>
           </Grid>
 
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={5}>
             <Box>
               <MainHeading variant="h1">
-                Always restock at <br />
-                the <HighlightText>perfect time</HighlightText>
+              Never Run Out  <br />
+                of <HighlightText> Stock </HighlightText> Again
               </MainHeading>
 
               <Typography
@@ -248,15 +195,14 @@ export default function Home() {
                   lineHeight: 1.6,
                 }}
               >
-                No need to babysit your stock levels.
+                Stay ahead of your inventory needs with automated restocking alerts. 
+                Whenever supplies are running low,
                 <br />
-                Whenever you're running low, DemandHives will let
-                <br />
-                you know it's time to restock.
+                Global Supply Connect ensures timely replenishment so your business never faces shortages.
               </Typography>
 
               <StyledButton variant="contained" size="large">
-                Start for free
+              Optimize Your Supply
               </StyledButton>
             </Box>
           </Grid>

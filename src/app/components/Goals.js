@@ -86,13 +86,16 @@ export default function Home() {
   const steps = ["Pre-Production", "Production", "Pre-Shipment", "Shipment"]
 
   return (
-    <MainContainer sx={{ margin: 3, borderRadius: 4 }}>
+    <MainContainer sx={{ margin: 3, borderRadius: 4 }}
+      id="Purchase"
+    >
       <Container maxWidth="lg">
         <Grid container spacing={6} alignItems="center">
           <Grid item xs={12} md={5}>
             <Box>
               <MainHeading variant="h1">
-                Place purchase orders <HighlightText>faster than ever</HighlightText>
+                <HighlightText> Streamline </HighlightText>
+                Your Procurement Process
               </MainHeading>
 
               <Typography
@@ -104,122 +107,36 @@ export default function Home() {
                   lineHeight: 1.6,
                 }}
               >
-                Build ready-to-submit POs in mere minutes.
+                Create and submit purchase orders in minutes with precision.
                 <br />
-                All with spot-on accuracy thanks to
-                <br />
-                personalized restock recommendations.
+                Get personalized supplier recommendations and ensure timely restocking—effortlessly.
+
               </Typography>
 
               <StyledButton variant="contained" size="large">
-                Start for free
+                Simplify Ordering Now
               </StyledButton>
             </Box>
           </Grid>
 
           <Grid item xs={12} md={7}>
-            <OrderInterface>
-              <InterfaceHeader>
-                <Typography variant="h6">Orders</Typography>
-                <IconButton size="small">
-                  <EditIcon fontSize="small" />
-                </IconButton>
-              </InterfaceHeader>
+            <Box sx={{ display: "flex", justifyContent: "center" }}>
+              <Box
+                component="video"
+                src="/logi.mp4"
+                autoPlay
+                loop
+                muted
+                sx={{
+                  width: "100%",
+                  maxWidth: 700,
+                  height: "auto",
+                  objectFit: "contain",
+                  borderRadius: "20px",
+                }}
+              />
+            </Box>
 
-              <Box sx={{ mb: 3 }}>
-                <Box sx={{ display: "flex", alignItems: "center", mb: 2, gap: 2 }}>
-                  <Typography variant="body1" sx={{ fontWeight: 500 }}>
-                    WHEELS
-                  </Typography>
-                  <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                    <Typography variant="body2" color="textSecondary">
-                      Destination: DemandHives UK
-                    </Typography>
-                  </Box>
-                  <Box sx={{ flex: 1 }} />
-                  <Button variant="outlined" size="small" endIcon={<KeyboardArrowDownIcon />} sx={{ mr: 1 }}>
-                    Pre-Production
-                  </Button>
-                  <Button
-                    variant="contained"
-                    size="small"
-                    endIcon={<KeyboardArrowDownIcon />}
-                    sx={{ backgroundColor: "#8a56ff" }}
-                  >
-                    Add Single Shipment
-                  </Button>
-                </Box>
-              </Box>
-
-              <StyledStepper activeStep={1} alternativeLabel>
-                {steps.map((label) => (
-                  <Step key={label}>
-                    <StepLabel>
-                      <Box sx={{ textAlign: "center" }}>
-                        <Typography variant="body2">{label}</Typography>
-                        {label === "Pre-Production" && (
-                          <Typography variant="caption" color="textSecondary">
-                            PO accepted
-                            <br />
-                            31.05.2023
-                          </Typography>
-                        )}
-                        {label === "Production" && (
-                          <TextField
-                            size="small"
-                            placeholder="dd/mm/yyyy"
-                            variant="outlined"
-                            sx={{ mt: 1, width: "120px" }}
-                          />
-                        )}
-                      </Box>
-                    </StepLabel>
-                  </Step>
-                ))}
-              </StyledStepper>
-
-              <Box sx={{ bgcolor: "#5a3b9c", p: 2, borderRadius: 1, mb: 3 }}>
-                <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-                  <Typography variant="body2" sx={{ color: "white" }}>
-                    Recommendations for
-                  </Typography>
-                  <KeyboardArrowDownIcon sx={{ color: "white" }} />
-                  <Box sx={{ flex: 1 }} />
-                  <Typography variant="body2" sx={{ color: "white" }}>
-                    All locations
-                  </Typography>
-                </Box>
-              </Box>
-
-              <Typography variant="subtitle1" sx={{ mb: 2 }}>
-                Purchase order for HOT WHEELS
-              </Typography>
-
-              <TableContainer>
-                <Table size="small">
-                  <TableHead>
-                    <TableRow>
-                      <TableCell>On Hand / Target</TableCell>
-                      <TableCell>Recommended</TableCell>
-                      <TableCell>In Transit</TableCell>
-                      <TableCell>Order Unit</TableCell>
-                      <TableCell>Total</TableCell>
-                      <TableCell>Unit Cost</TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    <TableRow>
-                      <TableCell>-</TableCell>
-                      <TableCell>-</TableCell>
-                      <TableCell>-</TableCell>
-                      <TableCell>-</TableCell>
-                      <TableCell>-</TableCell>
-                      <TableCell>-</TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </OrderInterface>
           </Grid>
         </Grid>
       </Container>
