@@ -265,9 +265,9 @@ const CogsyClone = () => {
                     mb: 4
                   }}>
                     <Link href="#" color="#ffffff" underline="none">Industry Insights</Link>
-                    <Link href="#" color="#ffffff" underline="none">Procurement Guides</Link>
+                    <Link href="#" color="#ffffff" underline="none">Procurement Guide</Link>
                     <Link href="#" color="#ffffff" underline="none">Logistics & Supply Chain</Link>
-                    <Link href="#" color="#ffffff" underline="none">Bulk Order Assistance</Link>
+                    <Link href="#" color="#ffffff" underline="none">Bulk Order </Link>
                   </Box>
 
                   {/* <Typography variant="h6" sx={{ mt: 2, mb: 2, color: "rgba(255,255,255,0.7)" }}>
