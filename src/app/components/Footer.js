@@ -113,6 +113,7 @@ const CogsyClone = () => {
             component="h1"
             sx={{
               fontWeight: 500,
+              fontFamily: "syne",
               mb: 1,
               fontSize: { xs: '2rem', md: '3.5rem' }
             }}
@@ -131,7 +132,9 @@ const CogsyClone = () => {
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               fontSize: { xs: '3.5rem', md: '6rem' },
-              lineHeight: 0.9
+              lineHeight: 0.9,
+              fontFamily: "syne",
+
             }}
           >
             Reliable Delivery.
@@ -140,6 +143,7 @@ const CogsyClone = () => {
             variant="contained"
             size="large"
             sx={{
+              fontFamily: "syne",
               bgcolor: '#7a4dff',
               '&:hover': {
                 bgcolor: '#6E57C4',
@@ -174,7 +178,10 @@ const CogsyClone = () => {
               <svg width="24" height="24" viewBox="0 0 24 24" fill="white" style={{ marginRight: "8px" }}>
                 <path d="M12,4 L20,8 L20,16 L12,20 L4,16 L4,8 L12,4 Z" />
               </svg>
-              <Typography variant="h6" component="div" sx={{ fontWeight: "bold" }}>
+              <Typography variant="h6" component="div" sx={{
+                fontWeight: "bold",
+                fontFamily: "syne",
+              }}>
                 DemandHives
               </Typography>
             </Box>
@@ -203,6 +210,7 @@ const CogsyClone = () => {
             }}>
               <Typography variant="h6" sx={{
                 fontWeight: 600,
+                fontFamily: "syne",
                 mb: 2,
                 ml: isMobile ? 0 : 12,
                 fontSize: { xs: '1.5rem', md: '2rem' }
@@ -211,6 +219,7 @@ const CogsyClone = () => {
               </Typography>
               <Typography variant="body2" sx={{
                 color: 'rgba(255,255,255,0.7)',
+                fontFamily: "Space Grotesk",
                 ml: isMobile ? 0 : 12,
                 fontSize: { xs: '1.2rem', md: '1.5rem' }
               }}>
