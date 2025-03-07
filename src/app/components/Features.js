@@ -9,10 +9,10 @@ import ShopIcon from "@mui/icons-material/Shop"
 import LocalShippingIcon from "@mui/icons-material/LocalShipping"
 // Custom styled components
 const MainHeading = styled(Typography)(({ theme }) => ({
-  fontSize: "3.5rem",
-  fontWeight: 700,
+  fontSize: "3rem",
+  fontWeight: 600,
   textAlign: "center",
-  color: "#6c41e0",
+  color: "#7a4dff",
   marginBottom: theme.spacing(6),
   [theme.breakpoints.down("md")]: {
     fontSize: "2.5rem",
@@ -21,6 +21,7 @@ const MainHeading = styled(Typography)(({ theme }) => ({
 const SubHeading = styled(Typography)(({ theme }) => ({
   fontSize: "3rem",
   fontWeight: 700,
+  fontFamily: "syne",
   color: "#6c41e0",
   marginBottom: theme.spacing(2),
   [theme.breakpoints.down("md")]: {
@@ -55,12 +56,14 @@ const TestimonialItem = styled(Box)(({ theme }) => ({
   gap: theme.spacing(2),
   padding: theme.spacing(0, 4),
   whiteSpace: 'nowrap',
+ fontFamily: "Space Grotesk"
 }))
 const StyledButton = styled(Button)(({ theme }) => ({
   backgroundColor: "#6c41e0",
   color: "white",
   padding: "12px 32px",
   borderRadius: "30px",
+  fontFamily: "syne",
   fontSize: "1.2rem",
   textTransform: "none",
   "&:hover": {
@@ -131,7 +134,7 @@ export default function Home() {
       brand: <Typography variant="body1" sx={{ color: "#6c41e0", fontWeight: 600, fontStyle: "italic" }}>Prestige Hotels</Typography>
     }
   ];
-  
+
   const months = ["DEC", "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV"]
 
   useEffect(() => {
@@ -157,15 +160,17 @@ export default function Home() {
     <Container
       maxWidth="xl" sx={{ bgcolor: "#fff" }}>
       <Box>
-        <MainHeading variant="h1">
-        Save 20+ hours a week on 
-          <br />
-          procurement & logistics
+        <MainHeading sx={{ fontFamily: "Space Grotesk"}} variant="h1">
+          Save 20+ hours a week{" "}
+          <span style={{ color: "#523694" }}>on
+            <br />
+            procurement & logistics</span>
         </MainHeading>
+
 
         {/* Marquee Testimonial Container */}
         <TestimonialContainer >
-          <TestimonialMarquee  animate={animate} speed={80} ref={testimonialRef}>
+          <TestimonialMarquee animate={animate} speed={80} ref={testimonialRef}>
             {/* Create multiple copies for continuous loop */}
             {[...testimonials, ...testimonials, ...testimonials, ...testimonials].map((item, index) => (
               <TestimonialItem key={index}>
@@ -185,15 +190,15 @@ export default function Home() {
                 sx={{ mt: 8, }}
               >
                 <SubHeading variant="h2">
-                Streamline Your 
+                  Streamline Your
                   <br />
                   <HighlightText>Supply Chain</HighlightText>
                 </SubHeading>
-                <Typography variant="body1" sx={{ mb: 4, color: "#6c41e0", fontSize: "1.1rem" }}>
-                Monitor stock availability, track shipments in real-time, and manage vendor details—all from a single dashboard.
+                <Typography variant="body1" sx={{ mb: 4, color: "#6c41e0", fontSize: "1.1rem", fontFamily: "Space Grotesk" }}>
+                  Monitor stock availability, track shipments in real-time, and manage vendor details—all from a single dashboard.
                 </Typography>
                 <StyledButton variant="contained" size="large">
-                Start Sourcing Now
+                  Start Sourcing Now
                 </StyledButton>
               </Grid>
               <Grid item xs={12} md={7}>

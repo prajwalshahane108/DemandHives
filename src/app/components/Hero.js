@@ -22,6 +22,7 @@ const MainButton = styled(Button)(({ theme, primary }) => ({
   borderRadius: "50px",
   padding: theme.spacing(1, 3),
   fontWeight: "bold",
+  fontFamily: "Space Grotesk",
   textTransform: "none",
   border: primary ? "2px solid #FFC107" : "none",
   color: primary ? "black" : "#664500",
@@ -44,106 +45,120 @@ const BeeConservation = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <MainContainer maxWidth="lg" id="Home">
-      <Grid container spacing={4} sx={{ mt: 0.5 }} alignItems="center" justifyContent="center" >
-        <Grid item xs={12} md={7} >
-          <Box sx={{ bgcolor: "#fff", textAlign: isMobile ? "center" : "left" }}>
-            <Box sx={{ bgcolor: "#fff", textAlign: isMobile ? "center" : "left", ml: { xs: 0, sm: 7 } }}>
+    <Grid sx={{ bgcolor: "#fff", p: 1 }}>
+      <MainContainer maxWidth="lg" sx={{ bgcolor: "#fff" }} >
+        <Grid container spacing={1}  alignItems="flex-start" justifyContent="center" >
+          <Grid item xs={12} md={7.5} sx={{ 
+                  bgcolor: "#fff",
+
+          }} >
+            <Box sx={{ bgcolor: "#fff", textAlign: isMobile ? "center" : "left" }}>
+              <Box sx={{ bgcolor: "#fff", textAlign: isMobile ? "center" : "left", ml: { xs: 0, sm: 7 } }}>
+                <Typography
+                  variant={isMobile ? "h4" : "h2"}
+                  component="h1"
+                  sx={{
+                    fontWeight: "bold",
+                    color: "#222222",
+                    mb: 1,
+                    fontFamily: "syne",
+                  }}
+                >
+                  Seamless Global Sourcing & Logistics
+                </Typography>
+                <Typography
+                  variant={isMobile ? "h4" : "h2"}
+                  component="h1"
+                  sx={{ fontWeight: "bold", color: "#222222", mb: 2 }}
+                >
+
+                </Typography>
+              </Box>
               <Typography
-                variant={isMobile ? "h4" : "h2"}
-                component="h1"
-                sx={{ fontWeight: "bold", color: "#222222", mb: 1 }}
+                variant="body1"
+                color="text.secondary"
+                paragraph
+                sx={{ mb: 4, maxWidth: isMobile ? "100%" : "80%", mx: "auto", fontFamily: "Space Grotesk" }}
               >
-                Seamless Global Sourcing & Logistics
+                {/* From eco-friendly cleaning products in Paris to office furniture in Singapore—DemandHives ensures your bulk procurement needs are met efficiently and reliably. */}
+                DemandHives is a global sourcing and logistics platform that seamlessly connects buyers with trusted suppliers worldwide. Whether you need 500 eco-friendly cleaning products for a boutique hotel in Paris, bulk office furniture for a new coworking space in Singapore, or specialized construction materials for a project in Brazil, we ensure that your demand finds the right supplier—efficiently and reliably.
               </Typography>
-              <Typography
-                variant={isMobile ? "h4" : "h2"}
-                component="h1"
-                sx={{ fontWeight: "bold", color: "#222222", mb: 2 }}
+
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: isMobile ? "column" : "row",
+                  alignItems: "center",
+                  gap: 2,
+                  mb: 4,
+                  ml: { xs: 0, sm: 7 },
+                  justifyContent: isMobile ? "center" : "flex-start",
+                }}
               >
+                <MainButton variant="outlined" sx={{ fontFamily: "Space Grotesk", border: "2px solid #FFC107" }}>
+                  Learn More
+                </MainButton>
+                <MainButton>Explore Sourcing</MainButton>
+              </Box>
 
-              </Typography>
+              <Grid container spacing={2} justifyContent={isMobile ? "center" : "flex-start"}>
+                <Grid item xs={12} sm={4}>
+                  <StatBox>
+                    <Typography variant="h4" component="div" fontWeight="bold">
+                      400+
+                    </Typography>
+                    <Typography sx={{ fontFamily: "Space Grotesk"}} variant="body2" color="text.secondary">
+                      Successful Bulk Orders Fulfilled
+                    </Typography>
+                  </StatBox>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                  <StatBox>
+                    <Typography variant="h4" component="div" fontWeight="bold">
+                      20K $
+                    </Typography>
+                    <Typography sx={{ fontFamily: "Space Grotesk"}} variant="body2" color="text.secondary">
+                      Countries Served
+                    </Typography>
+                  </StatBox>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                  <StatBox>
+                    <Typography variant="h4" component="div" fontWeight="bold">
+                      10M $
+                    </Typography>
+                    <Typography sx={{ fontFamily: "Space Grotesk"}} variant="body2" color="text.secondary">
+                      Worth of Goods Procured
+                    </Typography>
+                  </StatBox>
+                </Grid>
+              </Grid>
             </Box>
-            <Typography
-              variant="body1"
-              color="text.secondary"
-              paragraph
-              sx={{ mb: 4, maxWidth: isMobile ? "100%" : "80%", mx: "auto" }}
-            >
-              {/* From eco-friendly cleaning products in Paris to office furniture in Singapore—DemandHives ensures your bulk procurement needs are met efficiently and reliably. */}
-              DemandHives is a global sourcing and logistics platform that seamlessly connects buyers with trusted suppliers worldwide. Whether you need 500 eco-friendly cleaning products for a boutique hotel in Paris, bulk office furniture for a new coworking space in Singapore, or specialized construction materials for a project in Brazil, we ensure that your demand finds the right supplier—efficiently and reliably.
-            </Typography>
+          </Grid>
 
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: isMobile ? "column" : "row",
-                alignItems: "center",
-                gap: 2,
-                mb: 4,
-                ml: { xs: 0, sm: 7 },
-                justifyContent: isMobile ? "center" : "flex-start",
-              }}
-            >
-              <MainButton variant="outlined" sx={{ border: "2px solid #FFC107" }}>
-                Learn More
-              </MainButton>
-              <MainButton>Explore Sourcing</MainButton>
+          <Grid item xs={12} md={4.5} sx={{ bgcolor: "#fff" }}>
+            <Box sx={{
+              display: "flex", justifyContent: "center", alignItems: "center",
+              bgcolor: "#fff",
+
+            }}>
+              <Box
+                component="img"
+                src="/bee.png"
+                alt="Bee conservation hexagon images"
+                sx={{
+                  width: "100%",
+                  maxWidth: 380,
+                  height: "auto",
+                  objectFit: "contain",
+                  borderRadius: "20px",
+                }}
+              />
             </Box>
-
-            <Grid container spacing={2} justifyContent={isMobile ? "center" : "flex-start"}>
-              <Grid item xs={12} sm={4}>
-                <StatBox>
-                  <Typography variant="h4" component="div" fontWeight="bold">
-                    400+
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Successful Bulk Orders Fulfilled
-                  </Typography>
-                </StatBox>
-              </Grid>
-              <Grid item xs={12} sm={4}>
-                <StatBox>
-                  <Typography variant="h4" component="div" fontWeight="bold">
-                    20K $
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Countries Served
-                  </Typography>
-                </StatBox>
-              </Grid>
-              <Grid item xs={12} sm={4}>
-                <StatBox>
-                  <Typography variant="h4" component="div" fontWeight="bold">
-                    10M $
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Worth of Goods Procured
-                  </Typography>
-                </StatBox>
-              </Grid>
-            </Grid>
-          </Box>
+          </Grid>
         </Grid>
-
-        <Grid item xs={12} md={5}>
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
-            <Box
-              component="img"
-              src="/bee.png"
-              alt="Bee conservation hexagon images"
-              sx={{
-                width: "100%",
-                maxWidth: 380,
-                height: "auto",
-                objectFit: "contain",
-                borderRadius: "20px",
-              }}
-            />
-          </Box>
-        </Grid>
-      </Grid>
-    </MainContainer>
+      </MainContainer>
+    </Grid>
   );
 };
 

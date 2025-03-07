@@ -36,9 +36,10 @@ const WhiteCard = styled(Card)(({ theme }) => ({
   overflow: 'visible',
 }));
 const PurpleButton = styled(Button)(({ theme }) => ({
-  backgroundColor: '#6a11cb',
+  backgroundColor: '#7a4dff',
   color: 'white',
   borderRadius: '50px',
+  fontFamily: "syne",
   padding: '12px 24px',
   '&:hover': {
     backgroundColor: '#5a0cb2',
@@ -133,10 +134,11 @@ export default function Dashboard() {
               variant="h2"
               component="h1"
               sx={{
-                color: '#5a0cb2',
+                color: '#7a4dff',
                 fontWeight: 'bold',
                 mb: 2,
-                fontSize: { xs: '2.5rem', md: '3rem' },
+                fontFamily: "syne",
+                fontSize: { xs: '2.5rem', md: '2.9rem' },
               }}
             >
               Maximize Efficiency, Boost Profits
@@ -147,6 +149,7 @@ export default function Dashboard() {
               component="p"
               sx={{
                 color: '#6a11cb',
+                fontFamily: "Space Grotesk",
                 mb: 4,
                 fontSize: { xs: '1rem', md: '1.1rem' },
                 lineHeight: 1.5,
@@ -156,7 +159,7 @@ export default function Dashboard() {
             </Typography>
 
             <PurpleButton variant="contained" size="large">
-            Optimize Supply Chain
+              Optimize Supply Chain
             </PurpleButton>
           </Box>
         </Grid>

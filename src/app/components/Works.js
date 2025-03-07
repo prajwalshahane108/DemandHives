@@ -16,7 +16,9 @@ const MainContainer = styled(Box)(({ theme }) => ({
 const MainHeading = styled(Typography)(({ theme }) => ({
   fontSize: "3rem",
   fontWeight: 700,
-  color: "#5a3b9c",
+  fontFamily: "syne",
+  // fontFamily: "Space Grotesk"
+  color: "#473077",
   marginBottom: theme.spacing(3),
   [theme.breakpoints.down("md")]: {
     fontSize: "2.5rem",
@@ -24,14 +26,16 @@ const MainHeading = styled(Typography)(({ theme }) => ({
 }))
 
 const HighlightText = styled("span")({
-  color: "#8a56ff",
+  color: "#7a4dff",
+  fontFamily: "syne",
 })
 
 const StyledButton = styled(Button)(({ theme }) => ({
-  backgroundColor: "#8a56ff",
+  backgroundColor: "#7a4dff",
   color: "white",
   padding: "12px 32px",
   borderRadius: "30px",
+  fontFamily: "syne",
   fontSize: "1.2rem",
   textTransform: "none",
   "&:hover": {
@@ -182,7 +186,7 @@ export default function Home() {
           <Grid item xs={12} md={5}>
             <Box>
               <MainHeading variant="h1">
-              Never Run Out  <br />
+                Never Run Out  <br />
                 of <HighlightText> Stock </HighlightText> Again
               </MainHeading>
 
@@ -192,17 +196,18 @@ export default function Home() {
                   mb: 4,
                   color: "#5a3b9c",
                   fontSize: "1.1rem",
+                  fontFamily: "Space Grotesk",
                   lineHeight: 1.6,
                 }}
               >
-                Stay ahead of your inventory needs with automated restocking alerts. 
+                Stay ahead of your inventory needs with automated restocking alerts.
                 Whenever supplies are running low,
                 <br />
                 Global Supply Connect ensures timely replenishment so your business never faces shortages.
               </Typography>
 
               <StyledButton variant="contained" size="large">
-              Optimize Your Supply
+                Optimize Your Supply
               </StyledButton>
             </Box>
           </Grid>

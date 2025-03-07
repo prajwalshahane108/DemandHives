@@ -31,9 +31,15 @@ const Navbar = () => {
   }, []);
 
   const handleScroll = (id) => {
+    if (id === "Home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
     const section = document.getElementById(id);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      // Calculate the offset of the section and scroll to it
+      const offset = section.offsetTop - 100;
+      window.scrollTo({ top: offset, behavior: "smooth" });
     }
     setMobileOpen(false); // Close mobile drawer after clicking a menu item
   };
@@ -51,6 +57,7 @@ const Navbar = () => {
 
   return (
     <AppBar
+
       position="sticky"
       sx={{
         backgroundColor: isScrolled ? "#7a4dff" : "#473077",
@@ -63,7 +70,7 @@ const Navbar = () => {
         {/* Logo */}
         <Typography
           variant="h6"
-          sx={{ fontWeight: "bold", display: "flex", alignItems: "center" }}
+          sx={{ fontWeight: "bold", display: "flex", alignItems: "center", fontFamily: "syne" }}
         >
           <img
             src="/logo.png"
@@ -100,6 +107,7 @@ const Navbar = () => {
                       border: "2px solid white",
                       color: "white",
                       borderRadius: "25px",
+                      fontFamily: "syne",
                       padding: "8px 20px",
                       fontSize: "12px",
                       fontWeight: "500",
@@ -127,6 +135,8 @@ const Navbar = () => {
                   textTransform: "none",
                   fontSize: "16px",
                   fontWeight: "500",
+                  fontFamily: "syne",
+
                 }}
               >
                 {item.label}
@@ -143,6 +153,7 @@ const Navbar = () => {
                 borderRadius: "25px",
                 padding: "8px 20px",
                 fontSize: "12px",
+                fontFamily: "syne",
                 fontWeight: "500",
                 "&:hover": {
                   borderColor: "#ddd",

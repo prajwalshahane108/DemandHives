@@ -90,8 +90,8 @@ const CogsyClone = () => {
       <Box
         id="start"
         sx={{
-          bgcolor: '#523694', color: 'white', minHeight: '100vh',
-          marginTop: '6.5rem',
+          bgcolor: '#473077', color: 'white', minHeight: '100vh',
+          marginTop: '3.5rem',
         }}>
         {/* Header */}
         <AppBar position="static" elevation={0} color="transparent">
@@ -140,7 +140,7 @@ const CogsyClone = () => {
             variant="contained"
             size="large"
             sx={{
-              bgcolor: '#8067E0',
+              bgcolor: '#7a4dff',
               '&:hover': {
                 bgcolor: '#6E57C4',
               },
@@ -222,7 +222,7 @@ const CogsyClone = () => {
               <Grid container spacing={isMobile ? 4 : 2}>
                 {/* Company and Integrations */}
                 <Grid item xs={12} sm={6} md={6}>
-                  <Typography variant="h6" sx={{ mb: 2, color: "rgba(255,255,255,0.7)", fontSize: '1.2rem' }}>
+                  {/* <Typography variant="h6" sx={{ mb: 2, color: "rgba(255,255,255,0.7)", fontSize: '1.2rem' }}>
                     Company
                   </Typography>
                   <Box sx={{
@@ -236,7 +236,7 @@ const CogsyClone = () => {
                     <Link href="#" color="#fff" underline="none">Services</Link>
                     <Link href="#" color="#fff" underline="none">Contact Us</Link>
                     <Link href="#" color="#fff" underline="none">Privacy policy</Link>
-                  </Box>
+                  </Box> */}
                   {/* <Typography variant="h6" sx={{ mt: 2, mb: 2, color: "rgba(255,255,255,0.7)" }}>
                     Integrations
                   </Typography>
@@ -254,7 +254,7 @@ const CogsyClone = () => {
                 </Grid>
                 {/* Resources and Ultimate Guides */}
                 <Grid item xs={12} sm={6} md={6}>
-                  <Typography variant="h6" sx={{ mb: 2, color: "rgba(255,255,255,0.7)" }}>
+                  {/* <Typography variant="h6" sx={{ mb: 2, color: "rgba(255,255,255,0.7)" }}>
                   Resources & Support
                   </Typography>
                   <Box sx={{
@@ -268,7 +268,7 @@ const CogsyClone = () => {
                     <Link href="#" color="#ffffff" underline="none">Procurement Guide</Link>
                     <Link href="#" color="#ffffff" underline="none">Logistics & Supply Chain</Link>
                     <Link href="#" color="#ffffff" underline="none">Bulk Order </Link>
-                  </Box>
+                  </Box> */}
 
                   {/* <Typography variant="h6" sx={{ mt: 2, mb: 2, color: "rgba(255,255,255,0.7)" }}>
                     Ultimate guides

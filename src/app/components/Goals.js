@@ -32,9 +32,10 @@ const MainContainer = styled(Box)(({ theme }) => ({
 }))
 
 const MainHeading = styled(Typography)(({ theme }) => ({
-  fontSize: "3.5rem",
+  fontSize: "3rem",
   fontWeight: 700,
-  color: "#5a3b9c",
+  fontFamily: "syne",
+  color: "#473077",
   marginBottom: theme.spacing(3),
   [theme.breakpoints.down("md")]: {
     fontSize: "2.5rem",
@@ -43,14 +44,16 @@ const MainHeading = styled(Typography)(({ theme }) => ({
 
 const HighlightText = styled("span")({
   color: "#8a56ff",
+  fontFamily: "syne",
 })
 
 const StyledButton = styled(Button)(({ theme }) => ({
-  backgroundColor: "#8a56ff",
+  backgroundColor: "#7a4dff",
   color: "white",
   padding: "12px 32px",
   borderRadius: "30px",
   fontSize: "1.2rem",
+  fontFamily: "syne",
   textTransform: "none",
   "&:hover": {
     backgroundColor: "#7442ff",
@@ -104,6 +107,7 @@ export default function Home() {
                   mb: 4,
                   color: "#5a3b9c",
                   fontSize: "1.2rem",
+                  fontFamily: "Space Grotesk",
                   lineHeight: 1.6,
                 }}
               >

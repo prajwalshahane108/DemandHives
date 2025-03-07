@@ -49,6 +49,8 @@ const GradientText = styled(Typography)(({ theme }) => ({
   MozTextFillColor: "transparent",
   backgroundClip: "text",
   color: "transparent",
+  fontFamily: "syne",
+
   fontWeight: 700,
   fontSize: "4rem",
   [theme.breakpoints.down("md")]: {
@@ -78,6 +80,7 @@ const TryFreeButton = styled(Button)(({ theme }) => ({
   color: "white",
   fontSize: "2.5rem",
   fontWeight: 700,
+  fontFamily: "syne",
   textTransform: "none",
   padding: theme.spacing(0, 1),
   "&:hover": {
@@ -150,13 +153,13 @@ const Banner = () => {
               (text, index) => (
                 <MarqueeItem key={index}>
                   <TextContainer>
-                    <Typography variant="h2" component="div" color="white" fontWeight={700} mr={2}>
+                    <Typography sx={{ fontFamily: "syne", }} variant="h2" component="div" color="white" fontWeight={700} mr={2}>
                       {text.prefix}
                     </Typography>
                     <GradientText variant="h2" component="span">
                       {text.highlight}
                     </GradientText>
-                    <Typography variant="h2" component="div" color="#E57BBE" fontWeight={700} ml={2}>
+                    <Typography sx={{ fontFamily: "syne", }} variant="h2" component="div" color="#E57BBE" fontWeight={700} ml={2}>
                       {text.suffix}
                     </Typography>
                   </TextContainer>
