@@ -97,7 +97,8 @@ const CogsyClone = () => {
         <AppBar position="static" elevation={0} color="transparent">
           <Toolbar>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontWeight: 'bold', display: 'flex', alignItems: 'center' }}>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontWeight: 'bold', display: 'flex', alignItems: 'center', fontFamily: "syne",
+               }}>
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="white" style={{ marginRight: '8px' }}>
                   <path d="M15,5 L25,10 L25,20 L15,25 L5,20 L5,10 L15,5 Z" />
                 </svg>
