@@ -18,7 +18,7 @@ import {
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
-// Custom theme to match the design
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -97,11 +97,14 @@ const CogsyClone = () => {
         <AppBar position="static" elevation={0} color="transparent">
           <Toolbar>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontWeight: 'bold', display: 'flex', alignItems: 'center', fontFamily: "syne",
-               }}>
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="white" style={{ marginRight: '8px' }}>
-                  <path d="M15,5 L25,10 L25,20 L15,25 L5,20 L5,10 L15,5 Z" />
-                </svg>
+              <Typography variant="h6" component="div" sx={{
+                flexGrow: 1, fontWeight: 'bold', display: 'flex', alignItems: 'center', fontFamily: "syne",
+              }}>
+                <img
+            src="/demand.png"
+            alt="DemandHives"
+            style={{ height: "50px", marginRight: "10px" }}
+          />
                 DemandHives
               </Typography>
             </Box>
@@ -176,9 +179,11 @@ const CogsyClone = () => {
           }}>
             {/* Left Side - Logo & Name */}
             <Box sx={{ display: "flex", alignItems: "center" }}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="white" style={{ marginRight: "8px" }}>
-                <path d="M12,4 L20,8 L20,16 L12,20 L4,16 L4,8 L12,4 Z" />
-              </svg>
+              <img
+                src="/demand.png"
+                alt="DemandHives"
+                style={{ height: "50px", marginRight: "10px" }}
+              />
               <Typography variant="h6" component="div" sx={{
                 fontWeight: "bold",
                 fontFamily: "syne",

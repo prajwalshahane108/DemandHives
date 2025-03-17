@@ -73,9 +73,9 @@ const Navbar = () => {
           sx={{ fontWeight: "bold", display: "flex", alignItems: "center", fontFamily: "syne" }}
         >
           <img
-            src="/logo.png"
+            src="/demand.png"
             alt="DemandHives"
-            style={{ height: "30px", marginRight: "10px" }}
+            style={{ height: "50px", marginRight: "10px" }}
           />
           DemandHives
         </Typography>
