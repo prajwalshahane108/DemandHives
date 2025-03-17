@@ -64,7 +64,8 @@ const BeeConservation = () => {
                     fontFamily: "syne",
                   }}
                 >
-                  Seamless Global Sourcing & Logistics
+                  {/* Seamless Global Sourcing & Logistics */}
+                  DemandHives: The Middle Partner Your Business Needs
                 </Typography>
                 <Typography
                   variant={isMobile ? "h4" : "h2"}
@@ -81,7 +82,11 @@ const BeeConservation = () => {
                 sx={{ mb: 4, maxWidth: isMobile ? "100%" : "80%", mx: "auto", fontFamily: "Space Grotesk" }}
               >
                 {/* From eco-friendly cleaning products in Paris to office furniture in Singapore—DemandHives ensures your bulk procurement needs are met efficiently and reliably. */}
-                DemandHives is a global sourcing and logistics platform that seamlessly connects buyers with trusted suppliers worldwide. Whether you need 500 eco-friendly cleaning products for a boutique hotel in Paris, bulk office furniture for a new coworking space in Singapore, or specialized construction materials for a project in Brazil, we ensure that your demand finds the right supplier—efficiently and reliably.
+                {/* DemandHives is a global sourcing and logistics platform that seamlessly connects buyers with trusted suppliers worldwide. Whether you need 500 eco-friendly cleaning products for a boutique hotel in Paris, bulk office furniture for a new coworking space in Singapore, or specialized construction materials for a project in Brazil, we ensure that your demand finds the right supplier—efficiently and reliably. */}
+
+                DemandHives is your trusted global sourcing and logistics partner, seamlessly connecting businesses with high-quality suppliers worldwide. Whether you’re a boutique hotel in Paris looking for 500 eco-friendly cleaning products, a coworking space in Singapore in need of bulk office furniture, or a construction project in Brazil requiring specialized materials, we ensure your demands are met with the right solutions—efficiently and reliably.
+                As the middle partner your business needs, we simplify the process of sourcing, purchasing, and delivering premium products. From hotels to local businesses, we bridge the gap between you and trusted suppliers, offering competitive pricing, exceptional quality, and a seamless experience.
+                Let DemandHives handle the complexities of global sourcing while you focus on growing your business. With us, you’re not just getting a supplier—you’re gaining a partner dedicated to your success.
               </Typography>
 
               <Box

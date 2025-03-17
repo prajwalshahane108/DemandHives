@@ -190,9 +190,13 @@ export default function Home() {
                 sx={{ mt: 8, }}
               >
                 <SubHeading variant="h2">
-                  Streamline Your
-                  <br />
-                  <HighlightText>Supply Chain</HighlightText>
+                  {/* Streamline Your */}
+                  Want to sell more or {" "} 
+                  {/* <br /> */}
+                  <HighlightText>
+                    {/* Supply Chain */}
+                    find something new?
+                    </HighlightText>
                 </SubHeading>
                 <Typography variant="body1" sx={{ mb: 4, color: "#6c41e0", fontSize: "1.1rem", fontFamily: "Space Grotesk" }}>
                   Monitor stock availability, track shipments in real-time, and manage vendor details—all from a single dashboard.
